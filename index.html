@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Trip Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>✈️ AI Trip Planner</h1>
+    <p>나만의 여행 일정을 자동으로 생성해보세요!</p>
+</header>
+
+<div class="container">
+
+    <div class="card">
+        <h2>여행 정보 입력</h2>
+
+        <label>여행지</label>
+        <select id="destination">
+            <option value="서울">서울</option>
+            <option value="부산">부산</option>
+            <option value="제주">제주</option>
+        </select>
+
+        <label>시작 날짜</label>
+        <input type="date" id="startDate">
+
+        <label>종료 날짜</label>
+        <input type="date" id="endDate">
+
+        <label>여행 인원</label>
+        <input type="number" id="people" min="1" value="1">
+
+        <label>예산(만원)</label>
+        <input type="number" id="budget">
+
+        <label>여행 스타일</label>
+        <select id="style">
+            <option value="관광">관광 중심</option>
+            <option value="맛집">맛집 중심</option>
+            <option value="휴양">휴양 중심</option>
+            <option value="쇼핑">쇼핑 중심</option>
+        </select>
+
+        <button onclick="generateTrip()">일정 생성</button>
+        <button onclick="saveTrip()">일정 저장</button>
+        <button onclick="loadTrip()">불러오기</button>
+    </div>
+
+    <div class="card">
+        <h2>추천 일정</h2>
+        <div id="result"></div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
